@@ -1,1 +1,54 @@
+name: Node Harvest
 
+on:
+  schedule:
+    - cron: "0 */6 * * *" # every 6 hours, UTC
+  workflow_dispatch: {} # allow manual runs
+
+permissions:
+  contents: write # required to push history/outputs back
+
+concurrency:
+  group: node-harvest
+  cancel-in-progress: false
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run harvester
+        env:
+          # Built-in token authenticates /search/code (required, 10 req/min).
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Comma-separated RSSHub Telegram channels, e.g. "v2raypro,foo,bar"
+          RSS_CHANNELS: ${{ vars.RSS_CHANNELS || 'v2raypro' }}
+          # Optional self-hosted RSSHub base URL to dodge public-instance rate limits
+          RSSHUB_BASE: ${{ vars.RSSHUB_BASE || 'https://rsshub.app' }}
+          ALIVE_WORKERS: "64"
+        run: python main.py
+
+      - name: Commit results back (state persistence)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add history.txt nodes.txt nodes_base64.txt 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No new nodes - nothing to commit."
+            exit 0
+          fi
+          git commit -m "chore(nodes): auto-harvest $(date -u '+%Y-%m-%d %H:%M') UTC [skip ci]"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin HEAD:"${GITHUB_REF_NAME}"
