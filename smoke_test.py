@@ -134,4 +134,17 @@ with tempfile.TemporaryDirectory() as tmp:
     ok("prev alive: read + blank-stripped",
        main.load_previous_alive() == {"vmess://aaa", "trojan://bbb"})
 
+# 8) query resolution: unset / empty-string / custom env all behave.
+#    Empty string is the trap: GitHub Actions passes unset vars.* as "".
+import os  # noqa: E402
+ok("queries: default = 4 DEFAULT_QUERIES",
+   main._resolve_queries() == list(main.DEFAULT_QUERIES))
+os.environ["GITHUB_QUERIES"] = ""
+ok("queries: empty-string env falls back to default",
+   main._resolve_queries() == list(main.DEFAULT_QUERIES))
+os.environ["GITHUB_QUERIES"] = "vmess extension:txt, ,vless extension:txt"
+ok("queries: custom override + blank filtering",
+   main._resolve_queries() == ["vmess extension:txt", "vless extension:txt"])
+del os.environ["GITHUB_QUERIES"]
+
 print(f"\nALL {PASS} CHECKS PASSED")
