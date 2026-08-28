@@ -15,7 +15,7 @@ concurrency:
 jobs:
   harvest:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30 # multi-query radar + double liveness pass
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,8 +35,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Comma-separated RSSHub Telegram channels, e.g. "v2raypro,foo,bar"
           RSS_CHANNELS: ${{ vars.RSS_CHANNELS || 'v2raypro' }}
-          # Optional self-hosted RSSHub base URL to dodge public-instance rate limits
+          # Comma-separated mirror chain, tried in order; public rsshub.app
+          # 403s datacenter IPs. e.g. "https://my-rsshub.example.com,https://rsshub.app"
           RSSHUB_BASE: ${{ vars.RSSHUB_BASE || 'https://rsshub.app' }}
+          # Optional override of code-search queries (comma-separated, full
+          # GitHub search syntax). Default: vmess/vless/trojan/subscription + extension:txt
+          GITHUB_QUERIES: ${{ vars.GITHUB_QUERIES }}
           ALIVE_WORKERS: "64"
         run: python main.py
 
