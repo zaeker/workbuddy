@@ -3,12 +3,17 @@
 
 Pipeline:
     1. RSSHub /telegram/channel/<name>  -> parse XML, regex node URIs (no t.me/s/ HTML).
-    2. GitHub /search/code (q=vmess+extension:txt) -> raw content -> recursive base64 decode.
-    3. Diff against history.txt -> only never-seen nodes survive (incremental).
-    4. Concurrent TCP liveness check -> verified-alive nodes written to nodes.txt.
+       RSSHUB_BASE accepts a comma-separated mirror chain, tried in order.
+    2. GitHub /search/code with multiple queries (vmess/vless/trojan/subscription)
+       -> raw content -> recursive base64 decode. Query set configurable via
+       GITHUB_QUERIES. Files deduped across queries; queries spaced 7s apart
+       (/search/code allows 10 req/min).
+    3. Diff against history.txt -> only never-seen nodes are NEW (incremental).
+    4. Concurrent TCP liveness check of fresh nodes PLUS re-verification of the
+       previous run's alive pool -> rolling subscription output.
 
-State lives in git: history.txt is committed back to the repo by the workflow,
-because Actions runners are stateless.
+State lives in git: history.txt / nodes.txt / nodes_base64.txt are committed
+back to the repo by the workflow, because Actions runners are stateless.
 """
 
 from __future__ import annotations
@@ -33,7 +38,12 @@ from urllib3.util.retry import Retry
 
 LOG = logging.getLogger("harvester")
 
-RSSHUB_BASE = os.getenv("RSSHUB_BASE", "https://rsshub.app").rstrip("/")
+# Comma-separated fallback chain: the public rsshub.app instance 403s
+# datacenter IPs (GitHub Actions runners), so mirrors or a self-hosted
+# instance can be listed and are tried in order, e.g.
+#   RSSHUB_BASE="https://rss.example.com,https://rsshub.app"
+RSSHUB_BASES = [b.strip().rstrip("/")
+                 for b in os.getenv("RSSHUB_BASE", "https://rsshub.app").split(",") if b.strip()]
 GITHUB_API = "https://api.github.com"
 BASE_DIR = Path(__file__).resolve().parent
 HISTORY_FILE = BASE_DIR / "history.txt"
@@ -111,25 +121,24 @@ def harvest_text_nodes(text: str) -> set[str]:
 
 
 def fetch_rsshub(session: requests.Session, channels: list[str]) -> set[str]:
+    """For each channel, try every RSSHub base in order; first success wins."""
     nodes: set[str] = set()
     for channel in channels:
-        url = f"{RSSHUB_BASE}/telegram/channel/{channel}"
-        try:
-            resp = session.get(url, timeout=(10, 30))
-            resp.raise_for_status()
-        except requests.RequestException as exc:
-            LOG.warning("RSSHub: channel %r failed: %s", channel, exc)
-            continue  # one dead channel must not kill the others
-        try:
-            root = ET.fromstring(resp.content)
-        except ET.ParseError as exc:
-            LOG.warning("RSSHub: channel %r returned malformed XML: %s", channel, exc)
-            continue
         found: set[str] = set()
-        for element in root.iter():
-            if element.text:  # sweeps title/description/content:encoded alike
-                found |= harvest_text_nodes(element.text)
-        LOG.info("RSSHub: channel %r -> %d nodes", channel, len(found))
+        for base in RSSHUB_BASES:
+            url = f"{base}/telegram/channel/{channel}"
+            try:
+                resp = session.get(url, timeout=(10, 30))
+                resp.raise_for_status()
+                root = ET.fromstring(resp.content)
+            except (requests.RequestException, ET.ParseError) as exc:
+                LOG.warning("RSSHub %s: channel %r failed: %s", base, channel, exc)
+                continue  # next mirror
+            for element in root.iter():
+                if element.text:  # sweeps title/description/content:encoded alike
+                    found |= harvest_text_nodes(element.text)
+            LOG.info("RSSHub %s: channel %r -> %d nodes", base, channel, len(found))
+            break  # this channel succeeded - stop burning mirrors
         nodes |= found
     return nodes
 
@@ -195,6 +204,17 @@ def recursive_b64_nodes(text: str, depth: int = 0) -> set[str]:
     return found
 
 
+# best-match ordering is near-static for a fixed query, so a single query
+# re-fetches the same files every run. Multiple queries widen the water source.
+DEFAULT_QUERIES = (
+    "vmess extension:txt",
+    "vless extension:txt",
+    "trojan extension:txt",
+    "subscription extension:txt",
+)
+SEARCH_INTERVAL = 7  # /search/code is capped at 10 req/min - stay well under it
+
+
 def github_radar(session: requests.Session, token: str) -> set[str]:
     if not token:
         LOG.warning("GITHUB_TOKEN not set - GitHub radar skipped entirely.")
@@ -203,33 +223,45 @@ def github_radar(session: requests.Session, token: str) -> set[str]:
     headers = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
     # NOTE: /search/code does NOT support sort=updated (best-match only).
     # Recency is enforced by the history.txt diff downstream, not by the API.
-    params = {"q": "vmess extension:txt", "per_page": 50}
-    resp = github_get(session, f"{GITHUB_API}/search/code", headers=headers, params=params)
-    if resp.status_code != 200:
-        LOG.warning("GitHub code search failed: HTTP %d - %s", resp.status_code, resp.text[:200])
-        return set()
-    try:
-        items = resp.json().get("items", [])
-    except ValueError:
-        LOG.warning("GitHub code search returned non-JSON body.")
-        return set()
-    LOG.info("GitHub radar: %d candidate files", len(items))
+    queries = [q.strip() for q in
+               os.getenv("GITHUB_QUERIES", ",".join(DEFAULT_QUERIES)).split(",") if q.strip()]
+    LOG.info("GitHub radar: %d queries: %s", len(queries), queries)
 
     nodes: set[str] = set()
+    seen_files: set[str] = set()
     raw_headers = {"Accept": "application/vnd.github.raw"}
-    for item in items:
-        if item.get("size", 0) > MAX_RAW_FILE_BYTES:
+    for idx, query in enumerate(queries):
+        if idx:
+            time.sleep(SEARCH_INTERVAL)
+        params = {"q": query, "per_page": 50}
+        resp = github_get(session, f"{GITHUB_API}/search/code", headers=headers, params=params)
+        if resp.status_code != 200:
+            LOG.warning("GitHub code search %r failed: HTTP %d - %s",
+                        query, resp.status_code, resp.text[:200])
             continue
         try:
-            raw = github_get(session, item["url"], headers=raw_headers)
-        except requests.RequestException as exc:
-            LOG.warning("Raw fetch failed for %s: %s", item.get("html_url", "?"), exc)
+            items = resp.json().get("items", [])
+        except ValueError:
+            LOG.warning("GitHub code search returned non-JSON body for %r.", query)
             continue
-        if raw.status_code != 200:
-            continue
-        content = raw.content.decode("utf-8", errors="replace")
-        nodes |= recursive_b64_nodes(content)
-    LOG.info("GitHub radar: %d nodes", len(nodes))
+        new_items = [it for it in items if it.get("url") and it["url"] not in seen_files]
+        seen_files.update(it["url"] for it in new_items)
+        LOG.info("GitHub radar: query %r -> %d files (%d new to this run)",
+                 query, len(items), len(new_items))
+
+        for item in new_items:
+            if item.get("size", 0) > MAX_RAW_FILE_BYTES:
+                continue
+            try:
+                raw = github_get(session, item["url"], headers=raw_headers)
+            except requests.RequestException as exc:
+                LOG.warning("Raw fetch failed for %s: %s", item.get("html_url", "?"), exc)
+                continue
+            if raw.status_code != 200:
+                continue
+            content = raw.content.decode("utf-8", errors="replace")
+            nodes |= recursive_b64_nodes(content)
+        LOG.info("GitHub radar: running total after %r: %d nodes", query, len(nodes))
     return nodes
 
 
@@ -370,6 +402,18 @@ def append_history(fresh: list[str]) -> None:
             fh.write(uri + "\n")
 
 
+def load_previous_alive() -> set[str]:
+    """Previous run's verified-alive list - re-checked each run so the
+    subscription never freezes on a dying node set."""
+    if not NODES_FILE.exists():
+        return set()
+    prev = {ln.strip() for ln in
+            NODES_FILE.read_text(encoding="utf-8", errors="replace").splitlines()
+            if ln.strip()}
+    LOG.info("Previous output: %d nodes to re-verify", len(prev))
+    return prev
+
+
 def write_outputs(alive: list[str]) -> None:
     payload = "\n".join(alive) + ("\n" if alive else "")
     NODES_FILE.write_text(payload, encoding="utf-8")
@@ -392,7 +436,8 @@ def main() -> int:
 
     token = os.getenv("GITHUB_TOKEN", "")
     channels = [c.strip() for c in os.getenv("RSS_CHANNELS", "v2raypro").split(",") if c.strip()]
-    LOG.info("Channels: %s | GitHub radar: %s", channels, "ON" if token else "OFF")
+    LOG.info("Channels: %s | RSSHub bases: %s | GitHub radar: %s",
+             channels, RSSHUB_BASES, "ON" if token else "OFF")
 
     session = make_session(token or None)
 
@@ -410,20 +455,37 @@ def main() -> int:
     fresh = sorted(candidates - history)
     LOG.info("New nodes after diff against history: %d", len(fresh))
 
-    if not fresh:
-        LOG.info("Nothing new this run - outputs kept as they are.")
+    prev_alive = load_previous_alive()
+    if not fresh and not prev_alive:
+        LOG.info("Nothing new and no previous list - done.")
         return 0
 
-    alive, dead, unparsed = liveness_filter(fresh)
-    LOG.info("Liveness: %d alive / %d dead / %d unparsable", len(alive), dead, unparsed)
+    # Rolling alive pool: new survivors + re-verified previous survivors.
+    alive_new: list[str] = []
+    dead_new = unparsed_new = 0
+    if fresh:
+        alive_new, dead_new, unparsed_new = liveness_filter(fresh)
+        LOG.info("Liveness(fresh): %d alive / %d dead / %d unparsable",
+                 len(alive_new), dead_new, unparsed_new)
 
+    alive_prev: list[str] = []
+    if prev_alive:
+        alive_prev, dead_prev, _ = liveness_filter(sorted(prev_alive))
+        LOG.info("Liveness(previous): %d still alive / %d now dead",
+                 len(alive_prev), dead_prev)
+
+    alive = sorted(set(alive_new) | set(alive_prev))
     if alive:
         write_outputs(alive)
-        LOG.info("Wrote %d alive nodes to %s (+ base64 sub to %s)",
-                 len(alive), NODES_FILE.name, SUB_FILE.name)
-    else:
-        # Never clobber a good previous list with an empty one.
-        LOG.warning("0 of %d fresh nodes alive - previous outputs preserved.", len(fresh))
+        LOG.info("Wrote %d alive nodes to %s (+ base64 sub to %s) "
+                 "[%d fresh + %d retained]",
+                 len(alive), NODES_FILE.name, SUB_FILE.name,
+                 len(alive_new), len(alive_prev))
+    elif prev_alive:
+        # Everything died - an honest empty list beats a frozen corpse list.
+        write_outputs([])
+        LOG.warning("All %d previous nodes are now dead - outputs reset to empty.",
+                    len(prev_alive))
 
     append_history(fresh)  # every fresh node goes on record, dead or not
     LOG.info("history.txt updated: +%d entries.", len(fresh))

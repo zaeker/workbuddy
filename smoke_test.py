@@ -8,6 +8,8 @@ import tempfile
 import threading
 from pathlib import Path
 
+import requests
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import main  # noqa: E402
 
@@ -97,5 +99,39 @@ with tempfile.TemporaryDirectory() as tmp:
     history = main.load_history()
     ok("history: append + reload", history == {"trojan://a@1.1.1.1:1#x", "vmess://bbb", "vmess://ccc"})
     ok("history: auto-create empty", (Path(tmp) / "history2.txt").exists() or True)
+
+# 6) RSSHub mirror fallback: first base 403s, second serves a valid feed
+class _FakeResp:
+    def __init__(self, status: int, content: bytes = b""):
+        self.status_code = status
+        self.content = content
+
+    def raise_for_status(self) -> None:
+        if self.status_code >= 400:
+            raise requests.HTTPError(str(self.status_code))
+
+
+class _FakeSession:
+    def get(self, url: str, timeout=None) -> _FakeResp:
+        if url.startswith("https://bad.example"):
+            return _FakeResp(403)
+        feed = (b'<?xml version="1.0"?><rss><channel><item><title>'
+                b'vmess://eyJhZGQiOiIxLjIuMy40IiwicG9ydCI6NDQzfQ=='
+                b'</title></item></channel></rss>')
+        return _FakeResp(200, feed)
+
+
+main.RSSHUB_BASES = ["https://bad.example", "https://good.example"]
+rss_nodes = main.fetch_rsshub(_FakeSession(), ["v2raypro"])
+ok("rsshub: mirror fallback after 403",
+   len(rss_nodes) == 1 and next(iter(rss_nodes)).startswith("vmess://"))
+
+# 7) previous alive pool: missing file -> empty; existing file -> stripped set
+with tempfile.TemporaryDirectory() as tmp:
+    main.NODES_FILE = Path(tmp) / "nodes.txt"
+    ok("prev alive: missing file -> empty", main.load_previous_alive() == set())
+    main.NODES_FILE.write_text("vmess://aaa\n\ntrojan://bbb\n", encoding="utf-8")
+    ok("prev alive: read + blank-stripped",
+       main.load_previous_alive() == {"vmess://aaa", "trojan://bbb"})
 
 print(f"\nALL {PASS} CHECKS PASSED")
