@@ -42,8 +42,10 @@ LOG = logging.getLogger("harvester")
 # datacenter IPs (GitHub Actions runners), so mirrors or a self-hosted
 # instance can be listed and are tried in order, e.g.
 #   RSSHUB_BASE="https://rss.example.com,https://rsshub.app"
+# `or` (not getenv default): Actions passes unset vars.* as EMPTY STRINGS.
 RSSHUB_BASES = [b.strip().rstrip("/")
-                 for b in os.getenv("RSSHUB_BASE", "https://rsshub.app").split(",") if b.strip()]
+                 for b in (os.getenv("RSSHUB_BASE") or "https://rsshub.app").split(",")
+                 if b.strip()]
 GITHUB_API = "https://api.github.com"
 BASE_DIR = Path(__file__).resolve().parent
 HISTORY_FILE = BASE_DIR / "history.txt"
@@ -215,6 +217,14 @@ DEFAULT_QUERIES = (
 SEARCH_INTERVAL = 7  # /search/code is capped at 10 req/min - stay well under it
 
 
+def _resolve_queries() -> list[str]:
+    """GITHUB_QUERIES override or defaults. Uses `or`, NOT getenv default:
+    GitHub Actions passes unset vars.* through as EMPTY STRINGS, which would
+    bypass a getenv default and silently disable the radar."""
+    raw = os.getenv("GITHUB_QUERIES") or ",".join(DEFAULT_QUERIES)
+    return [q.strip() for q in raw.split(",") if q.strip()]
+
+
 def github_radar(session: requests.Session, token: str) -> set[str]:
     if not token:
         LOG.warning("GITHUB_TOKEN not set - GitHub radar skipped entirely.")
@@ -223,8 +233,10 @@ def github_radar(session: requests.Session, token: str) -> set[str]:
     headers = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
     # NOTE: /search/code does NOT support sort=updated (best-match only).
     # Recency is enforced by the history.txt diff downstream, not by the API.
-    queries = [q.strip() for q in
-               os.getenv("GITHUB_QUERIES", ",".join(DEFAULT_QUERIES)).split(",") if q.strip()]
+    queries = _resolve_queries()
+    if not queries:
+        LOG.warning("GITHUB_QUERIES resolved to an empty list - radar disabled.")
+        return set()
     LOG.info("GitHub radar: %d queries: %s", len(queries), queries)
 
     nodes: set[str] = set()
@@ -435,7 +447,7 @@ def main() -> int:
     )
 
     token = os.getenv("GITHUB_TOKEN", "")
-    channels = [c.strip() for c in os.getenv("RSS_CHANNELS", "v2raypro").split(",") if c.strip()]
+    channels = [c.strip() for c in (os.getenv("RSS_CHANNELS") or "v2raypro").split(",") if c.strip()]
     LOG.info("Channels: %s | RSSHub bases: %s | GitHub radar: %s",
              channels, RSSHUB_BASES, "ON" if token else "OFF")
 
