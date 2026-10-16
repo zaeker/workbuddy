@@ -6305,14 +6305,12 @@ trojan://jsxj911dddd@199.232.32.213:443?security=tls&sni=zmaoz.faculty.ucdavis.e
 trojan://juzi@104.19.57.183:2096?security=tls&amp
 trojan://kami@188.114.97.6:443?security=tls&amp
 trojan://kjsatdsybu1a@www.visa.com:8443?type=tcp&security=tls#CA
-trojan://kkzh2prsyr2ik47as615@64.94.95.114:57142?allowInsecure=1&sni=static.rutube.ru#%E7%BE%8E%E5%9B%BD
 trojan://kkzh2prsyr2ik47as615@64.94.95.114:57142?allowInsecure=1&sni=static.rutube.ru#US
 trojan://kkzh2prsyr2ik47as615@64.94.95.114:57142?sni=64.94.95.114&allowInsecure=1&type=tcp&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8US
 trojan://kkzh2prsyr2ik47as615@64.94.95.114:57142?sni=static.rutube.ru&allowInsecure=1&type=tcp&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8US
 trojan://kkzh2prsyr2ik47as615@64.94.95.115:57142?allowInsecure=1&sni=#%E7%BE%8E%E5%9B%BD
 trojan://kkzh2prsyr2ik47as615@64.94.95.115:57142?allowInsecure=1&sni=static.rutube.ru#US
 trojan://kkzh2prsyr2ik47as615@64.94.95.117:57142?sni=64.94.95.117&allowInsecure=1&type=tcp&fp=chrome#US
-trojan://kkzh2prsyr2ik47as615@64.94.95.118:57142?security=tls#US
 trojan://kkzh2prsyr2ik47as615@64.94.95.118:57142?security=tls&sni=64.94.95.118#
 trojan://kkzh2prsyr2ik47as615@64.94.95.118:57142?security=tls&sni=64.94.95.118#%F0%9F%87%BA%F0%9F%87%B8US-64.94.95.118-5264
 trojan://kkzh2prsyr2ik47as615@64.94.95.118:57142?security=tls&sni=64.94.95.118#US
@@ -14156,7 +14154,6 @@ vless://47fcef29-ab4e-4aa6-932b-d95a18f28a4e@188.114.97.6:8080?path=%2F%3Fed%3D2
 vless://47fcef29-ab4e-4aa6-932b-d95a18f28a4e@188.114.97.6:8080?path=%2F%3Fed%3D2560&security=none&encryption=none&fm=%7B%22tcp%22%3A%20%5B%7B%22type%22%3A%20%22fragment%22%2C%20%22settings%22%3A%20%7B%22packets%22%3A%20%221-1%22%2C%20%22lengths%22%3A%20%5B%221%22%5D%2C%20%22delays%22%3A%20%5B%224%22%5D%2C%20%22maxSplit%22%3A%20%22355%22%7D%7D%5D%7D&host=zb1zi.s3nx.dyz.hh.vavava.kdns.fr&type=ws#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20946854
 vless://47fcef29-ab4e-4aa6-932b-d95a18f28a4e@188.114.97.6:8080?path=%2F%3Fed%3D2560&security=none&encryption=none&fm=%7B%22tcp%22%3A%20%5B%7B%22type%22%3A%20%22fragment%22%2C%20%22settings%22%3A%20%7B%22packets%22%3A%20%221-1%22%2C%20%22lengths%22%3A%20%5B%221%22%5D%2C%20%22delays%22%3A%20%5B%224%22%5D%2C%20%22maxSplit%22%3A%20%22355%22%7D%7D%5D%7D&host=zb1zi.s3nx.dyz.hh.vavava.kdns.fr&type=ws#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20962990
 vless://47fcef29-ab4e-4aa6-932b-d95a18f28a4e@188.114.97.6:8080?path=/?ed=2560&security=none&encryption=none&fm=
-vless://47fcef29-ab4e-4aa6-932b-d95a18f28a4e@38.180.214.162:443?host=8nj2r.2k8t.f88.hh.vavava.kdns.fr&path=%2F%3Fed%3D2560&security=tls&sni=8nj2r.2k8t.f88.hh.vavava.kdns.fr&type=ws#
 vless://47fcef29-ab4e-4aa6-932b-d95a18f28a4e@91.245.225.17:443?host=8nj2r.2k8t.f88.hh.vavava.kdns.fr&path=%2F%3Fed%3D2560&security=tls&sni=8nj2r.2k8t.f88.hh.vavava.kdns.fr&type=ws#
 vless://47fcf82e-4c0a-4bb1-f205-874abb35ef07@www.speedtest.net:2086?path=/@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn?ed=2086&security=none&encryption=none&host=cafebazaar.ir.novinsoft.ir.oradoshop.com.persiangsm.ir.digikala.com.abadis.ir.shad.ir.divar.ir.downloadly.com.aparat.com.cafebazar.ir.varzesh3.com.ninisite.com.abadis.ir.bama.ir.p30download.ir.telewebion.bmi.ir.shad.ir.mayket.com.ninisite.top.&type=httpupgrade#
 vless://4801c19d-37aa-4704-921e-9ee9bab80f1d@speedtest.net:80?mode=auto&amp
@@ -19220,7 +19217,6 @@ vless://65f903c0-efcd-4b5e-96e3-97dda261f98a@sv10.iranphlox.ir:8880?security=rea
 vless://66008c21-6718-4a03-b7e6-002d3754ca8b@172.67.171.43:443?security=tls&sni=de1.vless.site&type=grpc&serviceName=vless-grpc#
 vless://661f5954-7f13-4c5f-add8-a7c0b250aabd@185.143.233.122:80?encryption=none&security=none&type=ws&host=gre.greentab.ir&path=/ws#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20598298
 vless://661f5954-7f13-4c5f-add8-a7c0b250aabd@185.143.233.122:80?encryption=none&security=none&type=ws&host=gre.greentab.ir&path=/ws#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20648917
-vless://663836b2-f676-43fb-977f-47c495b1b383@arab.chick-team.ru:443?security=reality&encryption=none&pbk=aFbCyrLOre-V3ORpBjqenGfDt62Ng
 vless://663836b2-f676-43fb-977f-47c495b1b383@us.chick-team.ru:443?security=reality&encryption=none&pbk=aFbCyrLOre-V3ORpBjqenGfDt62Ng
 vless://663cf772-829c-4bc6-893d-b7d021d42f5b@108.162.198.88:2096?encryption=none&fp=chrome&host=vp2.cc.cd&path=/&security=tls&sni=vp2.cc.cd&type=ws#
 vless://663cf772-829c-4bc6-893d-b7d021d42f5b@8.35.211.178:2087?encryption=none&fp=chrome&host=vp3.cc.cd&path=/&security=tls&sni=vp3.cc.cd&type=ws#
@@ -31184,7 +31180,6 @@ vless://f06c6039-a489-3d78-a676-ed43be6deca3@155.117.199.13:39217?sni=cdnjs.clou
 vless://f06c6039-a489-3d78-a676-ed43be6deca3@155.117.199.13:39399?&security=reality&flow=xtls-rprx-vision&pbk=JrWOojSFwFA93YjsiQkDydTItQzNAsXsHU24HuWGWjA&sid=bc8e3658db7d1323&fp=chrome&sni=cdnjs.cloudflare.com&type=tcp&headerType=none&host=cdnjs.cloudflare.com&path=%2F#US
 vless://f06c6039-a489-3d78-a676-ed43be6deca3@155.117.199.13:39399?flow=xtls-rprx-vision&fp=chrome&pbk=JrWOojSFwFA93YjsiQkDydTItQzNAsXsHU24HuWGWjA&security=tls&sid=bc8e3658db7d1323&sni=cdnjs.cloudflare.com&type=tcp#%F0%9F%87%BA%F0%9F%87%B8
 vless://f06c6039-a489-3d78-a676-ed43be6deca3@188.253.123.164:39401?&security=reality&flow=xtls-rprx-vision&pbk=JrWOojSFwFA93YjsiQkDydTItQzNAsXsHU24HuWGWjA&sid=bc8e3658db7d1323&fp=chrome&sni=cdnjs.cloudflare.com&type=tcp&headerType=none&host=cdnjs.cloudflare.com&path=%2F#%E6%97%A5%E6%9C%AC
-vless://f06c6039-a489-3d78-a676-ed43be6deca3@188.253.123.164:39411?&security=reality&flow=xtls-rprx-vision&pbk=JrWOojSFwFA93YjsiQkDydTItQzNAsXsHU24HuWGWjA&sid=bc8e3658db7d1323&fp=chrome&sni=cdnjs.cloudflare.com&type=tcp&headerType=none&host=cdnjs.cloudflare.com&path=%2F#%E6%97%A5%E6%9C%AC
 vless://f075b138-4e46-4022-a625-c5dfe4ddf19c@104.17.180.185:8443?security=tls&sni=free.smelean.ir&type=grpc&fp=chrome&alpn=h2
 vless://f0aca175-b680-4c54-dc66-b37e9917d92e@www.speedtest.net:2086?path=/@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn-@spikevpn?ed=2086&security=none&encryption=none&host=cafebazaar.ir.novinsoft.ir.oradoshop.com.persiangsm.ir.digikala.com.abadis.ir.shad.ir.divar.ir.downloadly.com.aparat.com.cafebazar.ir.varzesh3.com.ninisite.com.abadis.ir.bama.ir.p30download.ir.telewebion.bmi.ir.shad.ir.mayket.com.ninisite.top.&type=httpupgrade#Telegram:@config
 vless://f0b09670-9e9a-48f2-acd5-5b6cc33c83c5@104.16.219.215:443?path=%2Fvlws%3Fed%3D2048&security=tls&encryption=none&alpn=http/1.1&host=cdir-0304.wlfvip.shop&type=ws&sni=cdir-0304.wlfvip.shop#%40V2ray
