@@ -4315,7 +4315,6 @@ trojan://cf8c791e-9d0b-4e90-aaf6-41ac62468416@172.67.135.37:443?allowInsecure=0&
 trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@104.19.173.68:443?fp=chrome&path=/azadnet-5vk.pages.dev/?PROT
 trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@104.19.173.68:443?type=ws&path=%2Fazadnet-5vk.pages.dev%2F%3FPROT
 trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@www.digitalocean.com:443?encryption=none&security=tls&sni=azadnet-5vk.pages.dev&fp=randomized&type=ws&path=%2Fazadnet-5vk.pages.dev%2F%3Fed%3D2560%26PROT
-trojan://d050aca3-9df2-4461-90ec-92373c1d7636@v2jp.k1.ssnss.live:44184?security=tls#JP
 trojan://d06a14d0-ceb9-11ef-a13e-1239d0255272@51.38.65.155:443?security=tls&sni=uk1.test3.net&allowInsecure=1&fp=chrome&type=tcp#GB
 trojan://d06a14d0-ceb9-11ef-a13e-1239d0255272@uk1.test3.net:443?security=tls&headerType=none&type=tcp#GB
 trojan://d1a4cbb2943e4d27addae29bd449907a@195.54.161.249:9443?security=reality&sni=apple.com&pbk=4GpsOZbpJebCusrB0RnY4OcKroFdXGneQ04VmkggIlE&sid=aabbccdd&type=tcp&fp=random#GB
@@ -8685,7 +8684,6 @@ vless://2ac2a3ac-49ec-4cf1-90fd-252b7fad9fbe@51.195.119.204:80?security=none&fp=
 vless://2ad2e13c-8cb1-4666-8bfb-c42b51df2f1d@86.38.214.18:443?security=tls&sni=aLi.PinobiN.iR.&type=grpc&serviceName=%2Fcustom
 vless://2add6241-8fe8-3922-8347-da25e8ced601@sydney.aaaa.gay:1443?security=reality&encryption=none&pbk=zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM&headerType=none&fp=random&type=tcp&flow=xtls-rprx-vision&sni=tesla.com#%40WiFi-%40V2ray
 vless://2add6241-8fe8-3922-8347-da25e8ced601@sydney2.aaaa.gay:443?security=reality&encryption=none&pbk=zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM&headerType=none&fp=random&type=tcp&flow=xtls-rprx-vision&sni=tesla.com#%40WiFi-%40V2ray
-vless://2add6241-8fe8-3922-8347-da25e8ced601@trohkt.doubledou.icu:443?security=reality&encryption=none&pbk=zRZhlkKjUeqtIk9j6yy95aX-2krqQVyWORLv5tQkQGM&headerType=none&fp=random&type=tcp&flow=xtls-rprx-vision&sni=tesla.com#%40WiFi-%40V2ray
 vless://2af5dfe8-352a-4ec3-aa1a-8116de8d339f@104.17.14.48:443?path=%2Fvless&security=tls&encryption=none&host=fr-v.sshmax.xyz&type=ws&sni=fr-v.sshmax.xyz#@V2rayN
 vless://2b01b7b0-3872-44c0-8aaa-61863bab6ec3@172.67.131.181:443?type=ws&encryption=none&host=ESeTsecUritYLICEnsE.obbGYx.woRkers.DEv&path=%2FcQpaWFqbtpzZWefq%3Fed%3D2560&security=tls&sni=ESETseCuRItYLICensE.obBgYx.wOrKErS.dEV&alpn=h2%2Chttp%2F1.1&fp=randomized#RELAY
 vless://2b27d896-2d8e-4b1a-940a-140f0ca97519@www.speedtest.net:8443?path=%2FTelegram%2CVPNCUSTOMIZE%2CTelegram%2CVPNCUSTOMIZE%3Fed%3D2480&security=tls&encryption=none&alpn=h3
@@ -29240,7 +29238,6 @@ vless://de44b044-8f90-4e18-b742-16591667ff96@141.147.109.120:443?encryption=none
 vless://de44b044-8f90-4e18-b742-16591667ff96@141.147.114.192:443?encryption=none&security=tls&sni=edgetunnel-free.pages.dev&fp=randomized&type=ws&host=edgetunnel-free.pages.dev&path=%2F#RELAY
 vless://de44b044-8f90-4e18-b742-16591667ff96@143.47.179.64:443?encryption=none&security=tls&sni=edgetunnel-free.pages.dev&fp=randomized&type=ws&host=edgetunnel-free.pages.dev&path=%2F#RELAY
 vless://de44b044-8f90-4e18-b742-16591667ff96@143.47.185.27:443?encryption=none&security=tls&sni=edgetunnel-free.pages.dev&fp=randomized&type=ws&host=edgetunnel-free.pages.dev&path=%2F#RELAY
-vless://de44b044-8f90-4e18-b742-16591667ff96@150.230.44.13:443?encryption=none&security=tls&sni=edgetunnel-free.pages.dev&fp=randomized&type=ws&host=edgetunnel-free.pages.dev&path=%2F#RELAY
 vless://de44b044-8f90-4e18-b742-16591667ff96@193.123.63.146:443?encryption=none&security=tls&sni=edgetunnel-free.pages.dev&fp=randomized&type=ws&host=edgetunnel-free.pages.dev&path=%2F#RELAY
 vless://de543079-9ff5-4dce-8b68-97f61685efd7@104.20.23.46:443?security=tls&sni=hdfy1c1.cpiforpersia.uk&type=ws&host=hdfy1c1.cpiforpersia.uk&path=/LNGeLLJXXIlSdZMqnuxG&fp=chrome&alpn=h2#
 vless://de543079-9ff5-4dce-8b68-97f61685efd7@nodejs.org:443?alpn=h2&encryption=none&fp=chrome&host=hdfy1c1.cpiforpersia.uk&path=%2FLNGeLLJXXIlSdZMqnuxG&security=tls&sni=hdfy1c1.cpiforpersia.uk&type=ws#
@@ -39787,7 +39784,6 @@ vmess://eyJhZGQiOiI4NC4xNy40MS4yIiwiYWlkIjowLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0Ijoi
 vmess://eyJhZGQiOiI4NC4xNy40MS4yIiwiYWlkIjowLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiJmOGM4ZGMzZC0wZDM3LTQ2YjAtOGIzNC1hNzIzMjg4MmZjZmUiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsInBvcnQiOjE4MDAwLCJwcyI6IkJ5IEVicmFTaGEg8J+miCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJhdXRvIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
 vmess://eyJhZGQiOiI4NS45MC4yMTcuNDIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiMDQ2MjFiYWUtYWIzNi0xMWVjLWI5MDktMDI0MmFjMTIwMDAyIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIyMjMyNCIsInBzIjoiQnkgRWJyYVNoYSDwn6a+Iiwic2N5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
 vmess://eyJhZGQiOiI4NS45MC4yMTcuNDIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiMDQ2MjFiYWUtYWIzNi0xMWVjLWI5MDktMDI0MmFjMTIwMDAyIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIyMjMyNCIsInBzIjoiQnkgRWJyYVNoYSDwn6aIIiwic2N5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
-vmess://eyJhZGQiOiI4NS45MC4yMTcuNDIiLCJhaWQiOjAsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6IjA0NjIxYmFlLWFiMzYtMTFlYy1iOTA5LTAyNDJhYzEyMDAwMiIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoyMjMyNCwicHMiOiJCeSBFYnJhU2hhIPCfk7YiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiYXV0byIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
 vmess://eyJhZGQiOiI4NS4yMDYuMTY1LjM2IiwiYWlkIjo2NCwiaG9zdCI6IiIsImlkIjoiYmE0OWFiMDUtNzhmOC00YjBiLTk0MDAtMTgyNmNjMmQzZjc1IiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJCeSBFYnJhU2hhIPCfjJAiLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byJ9
 vmess://eyJhZGQiOiI4NS4yMDYuMTY1LjM2IiwiYWlkIjo2NCwiaG9zdCI6IiIsImlkIjoiYmE0OWFiMDUtNzhmOC00YjBiLTk0MDAtMTgyNmNjMmQzZjc1IiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJCeSBFYnJhU2hhIPCfk7wiLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byJ9
 vmess://eyJhZGQiOiI4NS4yMDYuMTY1LjM2IiwiYWlkIjo2NCwiaG9zdCI6IiIsImlkIjoiYmE0OWFiMDUtNzhmOC00YjBiLTk0MDAtMTgyNmNjMmQzZjc1IiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOjQ0MywicHMiOiJCeSBFYnJhU2hhIPCfp4oiLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byJ9
