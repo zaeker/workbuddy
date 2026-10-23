@@ -135,7 +135,6 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@38.54.2.182:990#%F0%9F
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@45.154.206.192:990#
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@45.154.206.192:990#%F0%9F%87%AA%F0%9F%87%B8ES%28AzadNet.t.me%29
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@79.127.233.170:990#%F0%9F%94%92%20SS-TCP-NA%20%F0%9F%87%A8%F0%9F%87%A6%20CA-79.127.233.170%3A990
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.179:8080#EPODONIOS
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.184:8080#EPODONIOS
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.191:8080#EPODONIOS
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.192:8080#EPODONIOS
@@ -5454,7 +5453,6 @@ trojan://humanity@172.67.149.60:443?path=%2Fassignment&security=tls&insecure=0&e
 trojan://humanity@172.67.149.60:443?path=%2Fassignment&security=tls&insecure=0&ech=ip.gs%2Budp%3A%2F%2F8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20972124
 trojan://humanity@172.67.149.60:443?path=%2Fassignment&security=tls&insecure=0&ech=ip.gs%2Budp%3A%2F%2F8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20990047
 trojan://humanity@172.67.149.60:443?path=%2Fassignment&security=tls&insecure=0&ech=ip.gs%2Budp%3A%2F%2F8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#EPODONIOS
-trojan://humanity@172.67.149.60:443?path=%2Fassignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs%2Budp%3A%2F%2F8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#t.me%2Fdicodeir-79
 trojan://humanity@172.67.149.60:443?path=%2Fassignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs%2Budp%3A%2F%2F8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#t.me%2Fdicodeir-80
 trojan://humanity@172.67.149.60:443?path=%2Fassignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs%2Budp%3A%2F%2F8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#t.me%2Fdicodeir-81
 trojan://humanity@172.67.149.60:443?path=%2Fassignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs%2Budp%3A%2F%2F8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#t.me%2Fdicodeir-95
@@ -5484,7 +5482,6 @@ trojan://humanity@172.67.149.60:443?path=/assignment&security=tls&insecure=0&hos
 trojan://humanity@172.67.149.60:443?path=/assignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#@FarazV2ray
 trojan://humanity@172.67.149.60:443?path=/assignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#@NOFiLTERING2
 trojan://humanity@172.67.149.60:443?path=/assignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#@Selinc
-trojan://humanity@172.67.149.60:443?path=/assignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#@V2raySaman
 trojan://humanity@172.67.149.60:443?path=/assignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#@irdusti
 trojan://humanity@172.67.149.60:443?path=/assignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#@prrofile
 trojan://humanity@172.67.149.60:443?path=/assignment&security=tls&insecure=0&host=www.ignitelimit.com&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=www.ignitelimit.com#CA
@@ -6129,20 +6126,6 @@ trojan://humanity@www.calmlunch.com:443?type=ws&security=tls&path=/assignment&ho
 trojan://humanity@www.calmlunch.com:443?type=ws&security=tls&path=/assignment&host=www.calmlunch.com&sni=www.calmlunch.com&insecure=0&allowInsecure=0#@V2ray
 trojan://humanity@www.creationlong.org:443?fp=chrome&path=%2Fassignment&type=ws#EPODONIOS
 trojan://humanity@www.creationlong.org:443?security=tls&sni=www.creationlong.org&fp=chrome&allowInsecure=0&alpn=h2
-trojan://humanity@www.gossipglove.com:443?allowInsecure=1&path=%2Fassignment&type=ws#EPODONIOS
-trojan://humanity@www.gossipglove.com:443?fp=chrome&path=%2Fassignment&security=tls&type=ws#
-trojan://humanity@www.gossipglove.com:443?path=%2Fassignment&amp
-trojan://humanity@www.gossipglove.com:443?path=%2Fassignment&security=tls&fp=chrome&type=ws&sni=www.gossipglove.com#
-trojan://humanity@www.gossipglove.com:443?path=%2Fassignment&security=tls&fp=chrome&type=ws&sni=www.gossipglove.com#4Nika-84f83263d1
-trojan://humanity@www.gossipglove.com:443?path=%2Fassignment&security=tls&fp=chrome&type=ws&sni=www.gossipglove.com#@Vip
-trojan://humanity@www.gossipglove.com:443?path=/assignment&security=tls&fp=chrome&type=ws&sni=www.gossipglove.com#
-trojan://humanity@www.gossipglove.com:443?path=/assignment&security=tls&fp=chrome&type=ws&sni=www.gossipglove.com#4Kian-7438cace1a
-trojan://humanity@www.gossipglove.com:443?path=/assignment&security=tls&fp=chrome&type=ws&sni=www.gossipglove.com#@v2rayng3
-trojan://humanity@www.gossipglove.com:443?path=/assignment&security=tls&fp=chrome&type=ws&sni=www.gossipglove.com#CA
-trojan://humanity@www.gossipglove.com:443?path=/assignment&security=tls&fp=chrome&type=ws&sni=www.gossipglove.com#EPODONIOS
-trojan://humanity@www.gossipglove.com:443?security=tls&sni=www.gossipglove.com&fp=chrome&allowInsecure=0&type=ws&path=/assignment#
-trojan://humanity@www.gossipglove.com:443?sni=www.gossipglove.com&peer=www.gossipglove.com&security=tls#XX
-trojan://humanity@www.gossipglove.com:443?type=ws&security=tls&path=%252Fassignment&sni=www.gossipglove.com&fp=chrome&allowInsecure=1#
 trojan://humanity@www.ignitelimit.com:443#
 trojan://humanity@www.ignitelimit.com:443?Telegram=@GozargahAzad
 trojan://humanity@www.ignitelimit.com:443?allowInsecure=0&sni=www.ignitelimit.com&ws=1&wspath=%2Fassignment#
@@ -6173,17 +6156,6 @@ trojan://humanity@www.ignitelimit.com:443?security=tls&type=ws&sni=www.ignitelim
 trojan://humanity@www.ignitelimit.com:443?sni=www.ignitelimit.com&allowInsecure=1&type=ws&path=/assignment&fp=chrome#%F0%9F%87%AB%F0%9F%87%B7FR
 trojan://humanity@www.ignitelimit.com:443?sni=www.ignitelimit.com&type=ws&path=/assignment&fp=chrome#%F0%9F%87%AB%F0%9F%87%B7FR
 trojan://humanity@www.ignitelimit.com:443?type=ws&amp
-trojan://humanity@www.multiplydose.com:443?path=%2Fassignment&amp
-trojan://humanity@www.multiplydose.com:443?path=/assignment&security=tls&fp=chrome&type=ws&sni=www.multiplydose.com#
-trojan://humanity@www.multiplydose.com:443?path=/assignment&security=tls&fp=chrome&type=ws&sni=www.multiplydose.com#4Sarina-cf8469ce02
-trojan://humanity@www.multiplydose.com:443?path=/assignment&security=tls&fp=chrome&type=ws&sni=www.multiplydose.com#@CUSTOMVPNSERVER
-trojan://humanity@www.multiplydose.com:443?path=/assignment&security=tls&fp=chrome&type=ws&sni=www.multiplydose.com#CA
-trojan://humanity@www.multiplydose.com:443?path=/assignment&security=tls&fp=chrome&type=ws&sni=www.multiplydose.com#EPODONIOS
-trojan://humanity@www.multiplydose.com:443?path=/assignment&security=tls&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=www.multiplydose.com#
-trojan://humanity@www.multiplydose.com:443?path=/assignment&security=tls&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=www.multiplydose.com#4Mohsen-ff43c79fdf
-trojan://humanity@www.multiplydose.com:443?path=/assignment&security=tls&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=www.multiplydose.com#EPODONIOS
-trojan://humanity@www.multiplydose.com:443?security=tls&sni=www.multiplydose.com&fp=chrome&allowInsecure=0&type=ws&path=/assignment#
-trojan://humanity@www.multiplydose.com:443?type=ws&security=tls&path=%252Fassignment&sni=www.multiplydose.com&fp=chrome&allowInsecure=1#
 trojan://humanity@www.speedtest.org:443?allowInsecure=0&sni=www.ignitelimit.com&ws=1&wspath=%2Fassignment#
 trojan://humanity@www.speedtest.org:443?allowInsecure=1&sni=www.ignitelimit.com#
 trojan://humanity@www.speedtest.org:443?allowInsecure=1&sni=www.ignitelimit.com#%F0%9F%87%AB%F0%9F%87%B7%E6%B3%95%E5%9B%BD%E4%B8%A8yoyapai.com%5Cr
@@ -12092,7 +12064,6 @@ vless://43dab336-b5cf-473f-db6e-e54ea23aec5b@172.67.203.233:2096?security=tls&sn
 vless://43e00e4c-2316-4dc9-8262-cef31886dc56@104.16.67.38:2086?security=none&type=ws&host=vless-sub.n7p8ri7j.workers.dev&path=%2Fmarly.toptechnonews.com%2Fnimws#
 vless://43e00e4c-2316-4dc9-8262-cef31886dc56@172.67.170.103:443?path=%2Fnimws&security=tls&encryption=none&alpn=h2
 vless://43e00e4c-2316-4dc9-8262-cef31886dc56@172.67.178.12:443?security=tls&type=ws&sni=marly.toptechnonews.com&path=/nimws&encryption=none&headerType=none#
-vless://43e00e4c-2316-4dc9-8262-cef31886dc56@51.77.108.58:443?type=ws&encryption=none&host=marly.toptechnonews.com&path=%2Fnimws&ed=2048&eh=Sec-Websocket-Protocol&security=tls&sni=marly.toptechnonews.com&alpn=http%2F1.1&fp=chrome#RELAY
 vless://43ef78f8-ae84-402d-982d-8fe8b53b8d37@134.122.41.60:443?mode=stream-one&path=/sf&security=none&encryption=none&type=xhttp#
 vless://43f3f527-af58-4fc3-9233-678bcffbd0f7@104.19.146.112:443?encryption=none&security=tls&sni=v2RAyNGgHAviV2rAYnGGhAviV2raYngghAViV2RAynGGhAVIv2rAyNG.PAGEs.DeV&alpn=http%2F1.1&fp=randomized&type=ws&host=v2rayngghaviv2rayngghaviv2rayngghaviv2rayngghaviv2rayng.pages.dev&path=%2F#
 vless://43f3f527-af58-4fc3-9233-678bcffbd0f7@104.20.31.81:443?encryption=none&security=tls&sni=V2rayNGGhavIV2RayngGHAVIv2rAYngGHAviV2rayNgghAViV2rAyNG.Pages.DeV&alpn=http%2F1.1&fp=randomized&type=ws&host=v2rayngghaviv2rayngghaviv2rayngghaviv2rayngghaviv2rayng.pages.dev&path=%2F#
@@ -15120,7 +15091,6 @@ vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.20:23576?encryption=none
 vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.20:23576?encryption=none&flow=xtls-rprx-vision&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&security=reality&sid=01&sni=fuck.rkn&type=tcp#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20852441
 vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.20:23576?encryption=none&flow=xtls-rprx-vision&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&security=reality&sid=01&sni=fuck.rkn&type=tcp#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20855703
 vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.20:23576?encryption=none&flow=xtls-rprx-vision&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&security=reality&sid=01&sni=fuck.rkn&type=tcp#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20859998
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.20:23576?encryption=none&flow=xtls-rprx-vision&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&security=reality&sid=01&sni=fuck.rkn&type=tcp#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20865111
 vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.20:23576?encryption=none&flow=xtls-rprx-vision&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&security=reality&sid=01&sni=fuck.rkn&type=tcp#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20881608
 vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.20:23576?encryption=none&flow=xtls-rprx-vision&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&security=reality&sid=01&sni=fuck.rkn&type=tcp#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20886929
 vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.20:23576?encryption=none&flow=xtls-rprx-vision&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&security=reality&sid=01&sni=fuck.rkn&type=tcp#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20894734
@@ -17071,7 +17041,6 @@ vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.97:23576?security=realit
 vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.97:23576?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=fuck.rkn&fp=chrome&flow=xtls-rprx-vision&sid=01&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20895338
 vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.97:23576?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=fuck.rkn&fp=chrome&flow=xtls-rprx-vision&sid=01&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20896088
 vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.97:23576?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=fuck.rkn&fp=chrome&flow=xtls-rprx-vision&sid=01&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20899582
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.97:23576?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=fuck.rkn&fp=chrome&flow=xtls-rprx-vision&sid=01&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20906312
 vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.97:23576?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=fuck.rkn&fp=chrome&flow=xtls-rprx-vision&sid=01&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20921639
 vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.97:23576?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=fuck.rkn&fp=chrome&flow=xtls-rprx-vision&sid=01&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20922914
 vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.97:23576?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=fuck.rkn&fp=chrome&flow=xtls-rprx-vision&sid=01&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20925766
@@ -19177,8 +19146,6 @@ vless://6b91d025-da4e-45c1-a9a0-1124454b0765@172.67.198.217:2053?security=tls&sn
 vless://6b9a2e11-53af-489d-a7c4-f6173ab9e501@178.176.128.128:443?alpn=h2%2Chttp%2F1.1&encryption=none&extra=%7B%22host%22%3A%22%22%2C%22path%22%3A%22%2Fcontent%2Fsec.mp4%2F%22%2C%22mode%22%3A%22packet-up%22%2C%22headers%22%3Anull%2C%22xPaddingBytes%22%3A%221-4%22%2C%22xPaddingObfsMode%22%3Atrue%2C%22xPaddingKey%22%3A%22pid%22%2C%22xPaddingHeader%22%3A%22%22%2C%22xPaddingPlacement%22%3A%22query%22%2C%22xPaddingMethod%22%3A%22tokenish%22%2C%22uplinkHTTPMethod%22%3A%22Head%22%2C%22sessionIDPlacement%22%3A%22%22%2C%22sessionIDKey%22%3A%22%22%2C%22sessionIDTable%22%3A%22Base62%22%2C%22sessionIDLength%22%3A%224-8%22%2C%22seqPlacement%22%3A%22query%22%2C%22seqKey%22%3A%22chunk
 vless://6b9e7cb7-dc07-42b8-b501-19ba63642e39@151.101.3.8:80?path=%2FTelegram-ipV2Ray-Telegram-ipV2Ray-Telegram-ipV2Ray-Telegram-ipV2Ray-Telegram-ipV2Ray%3Fed%3D443&security=none&encryption=none&host=Tehranc3.Org&type=ws#@vpnclashfa
 vless://6ba57b64-4328-4620-a8d6-a6c7728c4b35@www.speedtest.net:8080?path=%2Ftelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%3Fed&security=none&encryption=none&host=10.v.v.y.www.speedtest.net.ftp.debian.org.bklink.iR.&type=ws#@vpnclashfa
-vless://6baf0a4b-a4e7-4b34-a762-fd0c6ec3f72f@185.173.144.38:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&fp=chrome&sni=cloudflare.com&pbk=PZeIaMJF01u
-vless://6baf0a4b-a4e7-4b34-a762-fd0c6ec3f72f@185.173.144.38:443?security=reality&encryption=none&pbk=PZeIaMJF01u
 vless://6bc1bd81-b763-4213-80ad-4586224e3079@162.159.43.233:443?allowInsecure=1&ed=2048&eh=Sec-WebSocket-Protocol&encryption=none&fp=chrome&host=tohidza.et6m22266a.workers.dev&path=%2F&security=tls&sni=tohidza.et6m22266a.workers.dev&type=ws#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20154776
 vless://6bc1bd81-b763-4213-80ad-4586224e3079@162.159.43.233:443?allowInsecure=1&ed=2048&eh=Sec-WebSocket-Protocol&encryption=none&fp=chrome&host=tohidza.et6m22266a.workers.dev&path=%2F&security=tls&sni=tohidza.et6m22266a.workers.dev&type=ws#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20409943
 vless://6bc1bd81-b763-4213-80ad-4586224e3079@162.159.43.233:443?allowInsecure=1&ed=2048&eh=Sec-WebSocket-Protocol&encryption=none&fp=chrome&host=tohidza.et6m22266a.workers.dev&path=/&security=tls&sni=tohidza.et6m22266a.workers.dev&type=ws#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20232538
@@ -19802,7 +19769,6 @@ vless://71ed6628-5870-4d19-8a52-f2a3ba3d4898@154.197.75.58:443?security=tls&sni=
 vless://71ed6628-5870-4d19-8a52-f2a3ba3d4898@154.197.75.58:8443?security=tls&sni=va.zhuk.us.kg&type=ws&host=va.zhuk.us.kg&path=%2F%3Fed%3D2560#
 vless://71ed6628-5870-4d19-8a52-f2a3ba3d4898@154.83.2.9:8443?security=tls&sni=va.zhuk.us.kg&type=ws&host=va.zhuk.us.kg&path=%2F%3Fed%3D2560#
 vless://71ed6628-5870-4d19-8a52-f2a3ba3d4898@155.46.213.187:443?security=tls&sni=va.zhuk.us.kg&type=ws&host=va.zhuk.us.kg&path=%2FProxyIP%3DProxyIP.US.fxxk.dedyn.io#
-vless://71ed6628-5870-4d19-8a52-f2a3ba3d4898@158.178.238.239:443?security=tls&sni=vb.zhuk.us.kg&type=ws&host=vb.zhuk.us.kg&path=%2F%3Fed%3D2560#
 vless://71ed6628-5870-4d19-8a52-f2a3ba3d4898@159.246.55.108:8443?security=tls&sni=va.zhuk.us.kg&type=ws&host=va.zhuk.us.kg&path=%2FProxyIP%3DProxyIP.US.fxxk.dedyn.io#
 vless://71ed6628-5870-4d19-8a52-f2a3ba3d4898@160.123.255.0:443?security=tls&sni=vb.zhuk.us.kg&type=ws&host=vb.zhuk.us.kg&path=%2F%3Fed%3D2560#
 vless://71ed6628-5870-4d19-8a52-f2a3ba3d4898@160.123.255.10:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=vb.zhuk.us.kg&type=ws&sni=vb.zhuk.us.kg#
